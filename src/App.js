@@ -7,11 +7,19 @@ import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import CreateProject from './components/projects/CreateProject';
 
+  const appStyle = {
+    backgroundImage: `url('/img/mario-bg.png')`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '100%',
+    backgroundPosition: 'bottom',
+    height: '100vh',
+  };
 class App extends Component {
   render() {
     return (
+      
       <BrowserRouter>
-        <div className="App">
+        <div className="App" style = {appStyle}>
           <Navbar />
           <Routes>
             <Route exact path='/' element={<Dashboard />} />
